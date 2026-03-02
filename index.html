@@ -1,115 +1,181 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Smart Paws Express</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Smart Paws Express</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #fffaf3;
-      text-align: center;
-    }
+<style>
 
-    .hero {
-      position: relative;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fffaf3;
+  text-align: center;
+}
 
-    .hero img {
-      width: 100%;
-      height: 65vh;
-      object-fit: cover;
-    }
+.hero {
+  position: relative;
+}
 
-    .overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.45);
-      padding: 25px 40px;
-      border-radius: 15px;
-      color: white;
-    }
+.hero img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
 
-    .overlay h1 {
-      margin: 0;
-      font-size: 2.8rem;
-    }
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.5);
+  padding: 25px 40px;
+  border-radius: 15px;
+  color: white;
+}
 
-    .overlay p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-    }
+.overlay h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
 
-    .content {
-      padding: 40px 20px;
-    }
+.section {
+  padding: 40px 20px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 16px 28px;
-      font-size: 18px;
-      color: white;
-      background-color: #25D366;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
+.highlight {
+  background-color: #ffe8cc;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
-    .btn:hover {
-      background-color: #1DA851;
-      transform: scale(1.08);
-    }
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
 
-    .section {
-      padding: 40px 20px;
-    }
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 20px;
+  transition: 0.3s ease;
+}
 
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    /* Mobile adjustments */
-    @media (max-width: 768px) {
-      .hero img {
-        height: 50vh;
-      }
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
 
-      .overlay h1 {
-        font-size: 1.8rem;
-      }
+.card h3 {
+  margin: 15px 0 10px;
+}
 
-      .overlay p {
-        font-size: 1rem;
-      }
-    }
+.price {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
 
-  </style>
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1DA851;
+  transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero img {
+    height: 45vh;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+</style>
 </head>
+
 <body>
 
-  <div class="hero">
-    <img src="26_New_Year_Header.png" alt="Smart Paws Express Dog">
-    <div class="overlay">
-      <h1>Smart Paws Express 🐾</h1>
-      <p>Premium Pet Food Delivered Fast</p>
-    </div>
+<div class="hero">
+  <img src="26_New_Year_Header.png" alt="Smart Paws Express">
+  <div class="overlay">
+    <h1>Smart Paws Express 🐾</h1>
+    <p>Premium Dog & Cat Food</p>
   </div>
+</div>
 
-  <div class="section">
-    <h2>Healthy Food. Happy Pets.</h2>
-    <p>We supply quality pet food at great prices. Fast responses and friendly service!</p>
-  </div>
+<div class="highlight">
+  🚚 FREE Delivery in Boston!
+</div>
 
-  <div class="content">
-    <a class="btn" href="https://wa.me/27712345678?text=Hi%20Smart%20Paws%20Express!%20I'd%20like%20to%20enquire%20about%20your%20pet%20food." target="_blank">
-      🐶 Chat on WhatsApp
+<div class="section">
+  <h2>Our Dog Food Range</h2>
+</div>
+
+<div class="products">
+
+  <!-- Adult Priority -->
+  <div class="card">
+    <img src="priority_food.png" alt="Adult Priority">
+    <h3>Adult Priority</h3>
+    <div class="price">8kg – R___</div>
+    <div class="price">25kg – R___</div>
+    <a class="btn" href="https://wa.me/27712345678?text=Hi!%20I'm%20interested%20in%20Adult%20Priority." target="_blank">
+      Enquire on WhatsApp
     </a>
   </div>
+
+  <!-- Adult Maintenance -->
+  <div class="card">
+    <img src="maint_food.png" alt="Adult Maintenance">
+    <h3>Adult Maintenance</h3>
+    <div class="price">10kg – R___</div>
+    <div class="price">20kg – R___</div>
+    <a class="btn" href="https://wa.me/27712345678?text=Hi!%20I'm%20interested%20in%20Adult%20Maintenance." target="_blank">
+      Enquire on WhatsApp
+    </a>
+  </div>
+
+  <!-- Puppy -->
+  <div class="card">
+    <img src="puppy_food.png" alt="Puppy Food">
+    <h3>Puppy</h3>
+    <div class="price">8kg – R___</div>
+    <div class="price">25kg – R___</div>
+    <a class="btn" href="https://wa.me/27712345678?text=Hi!%20I'm%20interested%20in%20Puppy%20Food." target="_blank">
+      Enquire on WhatsApp
+    </a>
+  </div>
+
+</div>
+
+<div class="section">
+  <h2>We Also Stock Cat Food 🐱</h2>
+  <p>Contact us on WhatsApp for available cat food options.</p>
+</div>
 
 </body>
 </html>
