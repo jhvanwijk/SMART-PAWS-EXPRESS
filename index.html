@@ -124,16 +124,96 @@ body {
   }
 }
 
+.brand-section {
+  /*margin-top:10px;*/
+  padding: 20px 20px;
+  background-color: #fff;
+}
+
+.brand-section h2 {
+  margin-bottom: 20px;
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.brand-logos img {
+  height: 60px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.brand-logos img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 </style>
 </head>
+
+<script>
+  const images3 = [
+    "images/mera/Care_PUPPY_HUHN_Packshot_RGB-800x800.png",
+	"images/mera/Care_JUNIOR_HUHN_Packshot_RGB-800x800.png",
+	"images/mera/Care_ADULT_SPORT_Packshot_RGB-800x800.png",
+	"images/mera/Care_ADULT_HUHN_Packshot_RGB-800x800.png",
+	"images/mera/Care_ADULT_LIGHT_HUHN_Packshot_RGB-800x800.png",
+	"images/mera/Care_SENIOR_HUHN_Packshot_RGB-800x800.png"
+  ];
+  
+    const images1 = [
+    "images/mera/essential_UNIVIT_MIX_MENUE_Packshot_RGB-800x8000.png",
+	"images/mera/essential-softdiner-mix-menue-packshot-800x800.png",
+	"images/mera/essential_Active-800x800.png",
+	"images/mera/essential_Brocken-800x800.png"
+  ];
+  
+    const images2 = [
+	<!--"images/mera/mera-brandpage-pure-sensitive-snacks-800x800.png",-->
+	"images/mera/mera-brandpage-pure-sensitive-puppy-800x800.png",
+	"images/mera/mera-brandpage-pure-sensitive-junior-800x800.png",
+	"images/mera/mera-brandpage-pure-sensitive-adult-800x800.png",
+	"images/mera/mera-brandpage-pure-sensitive-senior-800x800.png"
+  ];
+
+  // FIRST CARD
+  let index1 = 0;
+
+  setInterval(() => {
+    index1 = (index1 + 1) % images1.length;
+    document.getElementById("MeraEssentImage").src = images1[index1];
+  }, 5000);
+  
+  // SECOND CARD
+  let index2 = 0;
+
+  setInterval(() => {
+    index2 = (index2 + 1) % images2.length;
+    document.getElementById("MeraPureImage").src = images2[index2];
+  }, 5000);
+  
+  // THIRD CARD
+  let index3 = 0;
+
+  setInterval(() => {
+    index3 = (index3 + 1) % images3.length;
+    document.getElementById("MeraCareImage").src = images3[index3];
+  }, 5000);
+</script>
 
 <body>
 
 <div class="hero">
-  <img src="More_Please.jpg" alt="Smart Paws Express">
+  <img src="images\More_Please.jpg" alt="Smart Paws Express">
   <div class="overlay">
     <h1>Smart Paws Express 🐾</h1>
-    <p>Premium Dog Food</p>
+    <p>Your Smart Pet Food Choice</p>
   </div>
 </div>
 
@@ -142,14 +222,14 @@ body {
 </div>
 
 <div class="section">
-  <h2>Our Liebe Dog Food Range</h2>
+  <h2>Our Dog Food Range</h2>
 </div>
 
 <div class="products">
 
   <!-- Adult Priority -->
   <div class="card">
-    <img src="priority_food.png" alt="Adult Priority">
+    <img src="images\liebe\priority_food_sa.png" alt="Adult Priority">
     <h3>Adult Priority</h3>
     <div class="price">8kg – R 210</div>
     <div class="price">25kg – R 550</div>
@@ -160,7 +240,7 @@ body {
 
   <!-- Adult Maintenance -->
   <div class="card">
-    <img src="maint_food.png" alt="Adult Maintenance">
+    <img src="images\liebe\maint_food_sa.png" alt="Adult Maintenance">
     <h3>Adult Maintenance</h3>
     <div class="price">2kg – R 80</div>
     <div class="price">10kg – R 300</div>
@@ -172,7 +252,7 @@ body {
 
   <!-- Puppy -->
   <div class="card">
-    <img src="puppy_food.png" alt="Puppy Food">
+    <img src="images\liebe\puppy_food_sa.png" alt="Puppy Food">
     <h3>Puppy</h3>
     <div class="price">8kg – R 300</div>
     <div class="price">25kg – R 700</div>
@@ -180,15 +260,121 @@ body {
       Enquire on WhatsApp
     </a>
   </div>
+</div>
+
+<div class="products">
+
+  <!-- Essential -->
+  <div class="card">
+    <img id="MeraEssentImage" src="images/mera/essential_Brocken-800x800.png" alt="Essential">
+    <h3>Essential</h3>
+	  <h4>Original (12.5kg)</h4>
+    <div class="price">Univit Adult – R 960</div>
+    <div class="price">Brocken Adult – R 960</div>
+	  <!--div class="price">Active Adult – R 990</div [Unavailable in RSA at the moment]-->
+	  <div class="price">Softdiner Adult – R 990</div>
+    <a class="btn" href="https://wa.me/27763341494?text=Hi!%20I'm%20interested%20in%20Mera%20Essential%20%20Dog%20Food." target="_blank">
+      Enquire on WhatsApp
+    </a>
+  </div>
+
+  <!-- Sensitive -->
+  <div class="card">
+    <img id="MeraPureImage" src="images/mera/mera-brandpage-pure-sensitive-adult-800x800.png" alt="Sensitive">
+    <h3>PURE Sensitive</h3>
+	  <h4>Turkey & Rice (12.5kg)</h4>
+	  <!--div class="price">Puppy – R 80</div-->
+    <div class="price">Junior – R 1360</div> <!--4kg = R 680-->
+	  <div class="price">Adult – R 1230</div> <!--4kg = R 620-->
+    <div class="price">Senior – R 1360</div>
+    <a class="btn" href="https://wa.me/27763341494?text=Hi!%20I'm%20interested%20in%20Mera%20Sensitive%20Dog%20Food." target="_blank">
+      Enquire on WhatsApp
+    </a>
+  </div>
+
+  <!-- Care -->
+  <div class="card" >
+    <img id="MeraCareImage" src="images/mera/Care_ADULT_HUHN_Packshot_RGB-800x800.png" alt="Care Food">
+	  <h3>Care</h3>
+	  <h4>Chicken</h4>
+    <div class="price">Puppy (4kg) – R 520</div>
+	  <div class="price">Junior (10kg) – R 1200</div>
+		<div class="price">Adult / Senior (10kg) – R 1100</div>
+		<a class="btn" href="https://wa.me/27763341494?text=Hi!%20I'm%20interested%20in%20Mera%20Care%20Dog%20Food." target="_blank">
+      Enquire on WhatsApp
+    </a>
+  </div>
 
 </div>
 
-<div class="section">
-  <h2>We Also Sell Cat Food 🐱</h2>
-  <p>Contact us on WhatsApp for available cat food options.</p>
+<div class="brand-section">
+  <!--h2>Our Dog Food Brands</h2-->
+
+  <div class="brand-logos">
+    <img src="images/brands/dog/liebe_logo.png" alt="Liebe">
+    <img src="images/brands/dog/mera_logo.png" alt="Mera">
+    <!--img src="images/brands/dog/Purina_Pro_Plan_logo.webp" alt="Purina">
+    <img src="images/brands/dog/emperor_logo.avif" alt="Emperor"-->
+  </div>
+</div>
+
+<div class="section" style="background-color:#EEF3EC">
+  <h2>Our Cat Food Range 🐱</h2>
+  <!--p>Contact us on WhatsApp for available cat food options.</p>
   <a class="btn" href="https://wa.me/27763341494?text=Hi!%20I'm%20interested%20in%20your%20cat%20food%20options." target="_blank">
       Enquire on WhatsApp
+    </a-->
+</div>
+
+<div class="products" style="background-color:#EEF3EC">
+
+  <!-- Ideal Cat -->
+  <div class="card" >
+    <img id="Ideal" src="images/ideal/ideal-catfood.png" alt="Ideal Cat Food">
+    <h3>Ideal</h3>
+    <div class="price">1.8kg – R 90</div>
+    <div class="price">5kg – R 240</div>
+	<div class="price">10kg – R 420</div>
+    <a class="btn" href="https://wa.me/27763341494?text=Hi!%20I'm%20interested%20in%20the%20Ideal%20Cat%20Food." target="_blank">
+      Enquire on WhatsApp
     </a>
+  </div>
+
+  <!-- Pro Plan Cat -->
+  <div class="card" >
+    <img id="ProPlanCat" src="images/purina/Pro_Plan_Adult_Chicken.png" alt="Pro Plan Cat">
+    <h3>Pro Plan</h3>
+    <div class="price">Adult 1.5kg – R 350</div>
+    <div class="price">Adult LiveClear 1.5kg – R 570</div>
+    <div class="price">Adult 7kg – R 1100</div>
+    <a class="btn" href="https://wa.me/27763341494?text=Hi!%20I'm%20interested%20in%20the%20Pro%10Plan%20Cat%20Food." target="_blank">
+      Enquire on WhatsApp
+    </a>
+  </div>
+
+     <!-- Amigo Cat -->
+  <div class="card" >
+    <img id="Juava" src="images/amigo/amigo_cat_800x800-.png" alt="Care Food">
+    <h3>Amigo</h3>
+    <div class="price">Adult 4kg – R 360</div>
+    <a class="btn" href="https://wa.me/27763341494?text=Hi!%20I'm%20interested%20in%20the%20Amigo%20Cat%20Food." target="_blank">
+      Enquire on WhatsApp
+    </a>
+  </div>
+
+</div>
+
+<div class="brand-section">
+  <!--h2>Our Cat Food Brands</h2-->
+
+  <div class="brand-logos">
+    <img src="images/brands/cat/amigo_logo.png" alt="Amigo">
+	  <img src="images/brands/cat/ideal_logo.png" alt="Ideal">
+	  <!--img src="images/brands/cat/juava_logo.png" alt="Juava">
+    <img src="images/brands/cat/mera_logo.png" alt="Mera">
+	  <img src="images/brands/cat/pamper_logo.png" alt="Pamper"-->
+    <img src="images/brands/cat/pro_plan_logo.png" alt="Purina">
+  </div>
 </div>
 
 </body>
