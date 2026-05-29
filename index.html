@@ -173,14 +173,14 @@ body {
 	"images/mera/Care_SENIOR_HUHN_Packshot_RGB-800x800.png"
   ];
   
-    const images1 = [
-    "images/mera/essential_UNIVIT_MIX_MENUE_Packshot_RGB-800x8000.png",
+  const images1 = [
+  "images/mera/essential_UNIVIT_MIX_MENUE_Packshot_RGB-800x8000.png",
 	"images/mera/essential-softdiner-mix-menue-packshot-800x800.png",
 	"images/mera/essential_Active-800x800.png",
 	"images/mera/essential_Brocken-800x800.png"
   ];
   
-    const images2 = [
+  const images2 = [
 	<!--"images/mera/mera-brandpage-pure-sensitive-snacks-800x800.png",-->
 	"images/mera/mera-brandpage-pure-sensitive-puppy-800x800.png",
 	"images/mera/mera-brandpage-pure-sensitive-junior-800x800.png",
@@ -188,14 +188,27 @@ body {
 	"images/mera/mera-brandpage-pure-sensitive-senior-800x800.png"
   ];
 
-      const images4 = [
+  const images4 = [
 	"images/nexgard/nexgard_spectra.png",
 	"images/nexgard/nexgard_dog.png"
   ];
 
-        const images5 = [
+  const images5 = [
 	"images/nexgard/nexgard_combo.png",
 	"images/nexgard/nexgard_cat.png"
+  ];
+
+  const images6 = [
+	"images/nexgard/frontline_plus_orange.jpg",
+  "images/nexgard/frontline_plus_blue.jpg",
+  "images/nexgard/frontline_plus_purple.jpg",
+  "images/nexgard/frontline_plus_red.jpg",
+  "images/nexgard/frontline_plus_options.jpg"
+  ];
+
+  const images7 = [
+	"images/nexgard/nexgard_standard.png",
+	"images/nexgard/nexgard_std_dog.png"
   ];
 
   // FIRST CARD
@@ -236,6 +249,22 @@ body {
   setInterval(() => {
     index5 = (index5 + 1) % images5.length;
     document.getElementById("NexgardCombo").src = images5[index5];
+  }, 5000);
+
+  // SIXTH CARD
+  let index6 = 0;
+
+  setInterval(() => {
+    index6 = (index6 + 1) % images6.length;
+    document.getElementById("FrontlinePlus").src = images6[index6];
+  }, 5000);
+
+  // SEVENTH CARD
+  let index7 = 0;
+
+  setInterval(() => {
+    index7 = (index7 + 1) % images7.length;
+    document.getElementById("Nexgard").src = images7[index7];
   }, 5000);
 
 
@@ -343,10 +372,40 @@ body {
 </div>
 
 <div class="products">
-    <!-- Nexgard Canine -->
+    <!-- Frontline Plus -->
+  <div class="card" >
+    <img id="FrontlinePlus" src="images/nexgard/frontline_plus_orange.jpg" alt="Frontline Plus">
+	  <h3>Frontline Plus (3 PIP)</h3>
+	  <!--h4>Canine</h4-->
+    <div class="price" style="white-space: pre;">Orange : XS (0-10kg)      – R 280</div>
+	  <div class="price" style="white-space: pre;">    Blue : Med (10-20kg)   – R 360</div>
+    <div class="price" style="white-space: pre;">   Purple : Lrg (20-40kg)   – R 470</div>
+    <div class="price" style="white-space: pre;">      Red : XL (40-60kg)     – R 520</div>
+    <p> <i>Additional <strong>DISCOUNT</strong> applies when purchased with a 8kg (or bigger) bag of dog food.</i> </p>
+		<a class="btn" href="https://wa.me/27763341494?text=Hi!%20I'm%20interested%20in%20Frontline%20Plus%20for%20my%20dog." target="_blank">
+      Enquire on WhatsApp
+    </a>
+  </div>
+
+    <!-- Nexgard -->
+  <div class="card" >
+    <img id="Nexgard" src="images/nexgard/nexgard_standard.png" alt="Nexgard">
+	  <h3>Nexgard (Single)</h3>
+	  <!--h4>Canine</h4-->
+    <div class="price" style="white-space: pre;">Orange : Sml (2-4kg)        – R 110</div>
+	  <div class="price" style="white-space: pre;">    Blue : Med (4-10kg)      – R 120</div>
+    <div class="price" style="white-space: pre;">   Purple : Lrg (10-25kg)    – R 140</div>
+    <div class="price" style="white-space: pre;">      Red : XL (25-50kg)      – R 180</div>
+    <p> <i>Additional <strong>DISCOUNT</strong> applies when purchased with a 8kg (or bigger) bag of dog food.</i> </p>
+		<a class="btn" href="https://wa.me/27763341494?text=Hi!%20I'm%20interested%20in%20Nexgard%20Std%20for%20my%20dog." target="_blank">
+      Enquire on WhatsApp
+    </a>
+  </div>
+
+    <!-- Nexgard Spectra -->
   <div class="card" >
     <img id="NexgardSpectra" src="images/nexgard/nexgard_spectra.png" alt="Nexgard Spectra">
-	  <h3>Nexgard Spectra <i>(May Deals)</i></h3>
+	  <h3>Nexgard Spectra  (Single)</h3>
 	  <!--h4>Canine</h4-->
     <div class="price" style="white-space: pre;">Orange : XS (2-3.5kg)        – R 130</div>
 	  <div class="price" style="white-space: pre;">   Yellow : Sml (3.6-7.5kg)   – R 150</div>
