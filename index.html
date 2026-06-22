@@ -165,7 +165,7 @@ body {
 
 <script>
   const images3 = [
-    "images/mera/Care_PUPPY_HUHN_Packshot_RGB-800x800.png",
+  "images/mera/Care_PUPPY_HUHN_Packshot_RGB-800x800.png",
 	"images/mera/Care_JUNIOR_HUHN_Packshot_RGB-800x800.png",
 	"images/mera/Care_ADULT_SPORT_Packshot_RGB-800x800.png",
 	"images/mera/Care_ADULT_HUHN_Packshot_RGB-800x800.png",
@@ -210,6 +210,23 @@ body {
 	"images/nexgard/nexgard_standard.png",
 	"images/nexgard/nexgard_std_dog.png"
   ];
+
+  const images8 = [
+	"images/pamper/pamper_deep_sea_delights.jpg",
+  "images/pamper/pamper_gourmet_feast.jpg",
+  "images/pamper/pamper_kitten.jpg",
+  "images/pamper/pamper_senior.jpg",
+  "images/pamper/pamper_country_feast.jpg"
+  ];
+
+  const images9 = [
+	"images/kitcat/kitcat_chick.png",
+  "images/kitcat/kitcat_classic.png",
+  "images/kitcat/kitcat_fillet.png",
+  "images/kitcat/kitcat_kitten.png",
+  "images/kitcat/kitcat_mini.png",
+  "images/kitcat/kitcat_ocean.png"
+  ];  
 
   // FIRST CARD
   let index1 = 0;
@@ -267,6 +284,21 @@ body {
     document.getElementById("Nexgard").src = images7[index7];
   }, 5000);
 
+  // EIGHTH CARD
+  let index8 = 0;
+
+  setInterval(() => {
+    index8 = (index8 + 1) % images8.length;
+    document.getElementById("Pamper").src = images8[index8];
+  }, 5000);
+
+  // NINTH CARD
+  let index9 = 0;
+
+  setInterval(() => {
+    index9 = (index9 + 1) % images9.length;
+    document.getElementById("KitCat").src = images9[index9];
+  }, 5000);
 
 </script>
 
@@ -479,10 +511,39 @@ body {
 </div>
 
 <div class="products" style="background-color:#EEF3EC">
+
+  <!--Kit Cat -->
+  <div class="card" >
+    <img id="KitCat" src="images/kitcat/kitcat_ocean.png" alt="Kit Cat">
+    <h3>Kit Cat</h3>
+    <div class="price">Pick of the Ocean 1.2kg – R 230</div>
+    <div class="price">Signature Salmon 1.2kg – R 240</div>
+    <div class="price">Mini Fish Medley 1.2kg – R 240</div>
+    <div class="price">Chicken Cuisine 1.2kg – R 240</div>
+    <div class="price">Fillet O'Flakes 1.2kg – R 250</div>
+    <div class="price">Kitten/Pregnant Cat 1.2kg – R 250</div>
+    <p><i>Dry food also available in 5kg bags.</i></p>
+    <a class="btn" href="https://wa.me/27763341494?text=Hi!%20I'm%20interested%20in%20the%20Kit%10Cat%20Cat%20Food." target="_blank">
+      Enquire on WhatsApp
+    </a>
+  </div>
+
+  <!--Pamper -->
+  <div class="card" >
+    <img id="Pamper" src="images/pamper/pamper_deep_sea_delights.jpg" alt="Pamper">
+    <h3>Pamper</h3>
+    <div class="price">Adult 2kg – R 190</div>
+    <div class="price">Adult 4kg – R 360</div>
+    <div class="price">Deep Sea Delights | Country Feast | Gourmet Meat</div>
+    <a class="btn" href="https://wa.me/27763341494?text=Hi!%20I'm%20interested%20in%20the%20Pamper%20Cat%20Food." target="_blank">
+      Enquire on WhatsApp
+    </a>
+  </div>
+
     <!-- Nexgard Feline -->
   <div class="card" >
     <img id="NexgardCombo" src="images/nexgard/nexgard_combo.png" alt="Nexgard Combo">
-	  <h3>Nexgard Combo <i>(May Deals)</i></h3>
+	  <h3>Nexgard Combo</h3>
 	  <!--h4>Feline</h4-->
     <div class="price" style="white-space: pre;">Purple : Sml (&lt;2.5kg)          – R 160</div>
 	  <div class="price" style="white-space: pre;">Yellow : Lrg (2.5kg - 7.5kg) – R 180</div>
@@ -501,8 +562,9 @@ body {
     <img src="images/brands/cat/amigo_logo.png" alt="Amigo">
 	  <img src="images/brands/cat/ideal_logo.png" alt="Ideal">
 	  <!--img src="images/brands/cat/juava_logo.png" alt="Juava">
-    <img src="images/brands/cat/mera_logo.png" alt="Mera">
-	  <img src="images/brands/cat/pamper_logo.png" alt="Pamper"-->
+    <img src="images/brands/cat/mera_logo.png" alt="Mera"-->
+    <img src="images/brands/cat/kitcat_logo.png" alt="Kit Cat">
+	  <img src="images/brands/cat/pamper_logo.png" alt="Pamper">
     <img src="images/brands/cat/pro_plan_logo.png" alt="Purina">
     <img src="images/brands/cat/nexgard_combo_1.png" alt="Nexgard Combo">
   </div>
